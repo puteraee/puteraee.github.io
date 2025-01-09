@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>RapidPrint UMPSA</title>
+		<link rel="icon" href="UMPSAlogo.png" type="image/png">
+		<link rel="stylesheet" href="Webpage CSS.css">
+		<script src="Script.js" defer></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	</head>
+	
+	<body>
+		<div class="container">
+		<nav class="navBar">
+			<div class="logo-container">
+				<img src="UMPSAlogo.png" alt="UMPSA Logo" class="logo">
+				<span class="brand-name">RapidPrint</span>
+			</div>
+			
+			<div class="navbar">
+				<a class="active" href="Webpage.html">Home</a>
+				
+				<div class="dropdown">
+					<button class="dropbtn" onclick="myFunction()">Products
+						<i class="fa fa-caret-down"></i>
+					</button>
+					
+					<div class="dropdown-content" id="myDropdown">
+						<a href="#product">All Products</a>
+						<a href="#product">Standard Printing Package</a>
+						<a href="#product">Premium Printing Package</a>
+						<a href="#product">Student Printing Package</a>
+						<a href="#product">Bulk Printing Package</a>
+						<a href="#product">Custom Printing</a>		
+					</div>					
+				</div>
+								
+				<a href="#aboutus">About Us</a>
+				
+				<a href="#bottom">Contact</a>
+				
+				<div class="search-container">
+					<form action="/action_page.php">
+						<input type="text" placeholder="Search" name="search">
+						
+						<button type="submit">
+							<i class="fa fa-search"></i>
+						</button>
+					</form>
+				</div>
+				
+				<div class="cart-container">
+					<a href="../Login/Login.php" class="cart-link">
+						<i class="fa fa-shopping-cart"></i>
+					</a>
+				</div>
+				
+				<div class="login-container">
+					<a href="../Login/Login.php" class="login-link">
+						<i class='far fa-user'></i>
+						Login
+					</a>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="generalInfo">
+			<table>
+				<tr>
+					<td class="left-column">
+						<h1>Welcome to RapidPrint UMPSA</h1>
+						<p>RapidPrint is a reliable and innovative printing solution that caters to students,
+							<br> educators, and businesses alike.</p>
+					</td>
+						
+					<td class="right-column">
+						<img src="printImg.jpg" alt="Print Image" class="printImg">
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="infoContainer">
+			<div class="infoColumn1">
+				<img src="25discount.png" alt="Discount Image" class="discountImage">
+				
+				<h1>For All Purchase Available for All Members</h1>
+				
+				<p>No expiry, allows multiple usage, and usable on all products</p>
+				
+				<button class="findOutMoreBtn">
+					Find Out More 
+					<i class="fa fa-arrow-right"></i> <!-- Add Font Awesome arrow icon -->
+				</button>
+			</div>
+		
+			<div class="infoColumn2">
+				<h2>We have more</h2>
+				<h1>Printing Options <br> Than Ever</h1>
+				<h2>customize yours according <br> to sizes you need</h2>
+				<button class="customBtn">
+					Custom Now
+					<i class="fa fa-arrow-right"></i> <!-- Add Font Awesome arrow icon -->
+				</button>
+			</div>
+			
+			<div class="infoColumn3">
+				<h1>Grab RM5 <br> Discount For Your <br> New Sign Up<h1>
+				<button class="signBtn">
+					Find Out More
+					<i class="fa fa-arrow-right"></i> <!-- Add Font Awesome arrow icon -->
+				</button>
+			</div>
+		</div>
+		
+		<div class="slideContainer">
+			<div class="slideColumn-left">
+				<h2>Membership Plan</h2>
+				<p>Sign up now and get an exclusive rate <br> for you.</p>
+				<button class="signUpBtn">
+					Sign Up
+					<i class="fa fa-arrow-right"></i> <!-- Add Font Awesome arrow icon -->
+				</button>
+			</div>
+			
+			<div class="slideColumn-right" id="product">
+				<div class="slideshow-container">
+					<!-- Slides -->
+					<div class="mySlides fade">
+						<img src="printImg1.png" alt="Image 1" class="slideImage">
+					</div>
+
+					<div class="mySlides fade">
+						<img src="printImg2.png" alt="Image 2" class="slideImage">
+					</div>
+
+					<div class="mySlides fade">
+						<img src="printImg3.png" alt="Image 3" class="slideImage">
+					</div>
+
+					<div class="mySlides fade">
+						<img src="printImg4.png" alt="Image 4" class="slideImage">
+					</div>
+
+					<div class="mySlides fade">
+						<img src="printImg5.png" alt="Image 5" class="slideImage">
+					</div>
+
+					<!-- Navigation Arrows -->
+					<a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+					
+					<a class="next" onclick="changeSlide(1)">&#10095;</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="customContainer">
+			<div class="memberColumn">
+				<h1>Need Something Customized?</h1>
+			</div>
+			
+			<div class="customColumn" id="bottom">
+				<button class="whatsappButton">
+					<i class="fa-brands fa-whatsapp"></i> 
+					Chat With Us
+				</button>
+			</div>
+		</div>
+		
+		<div class="aboutContainer">
+			<div class="aboutTable">
+				<div class="aboutRow">
+					<h2>ABOUT US</h2>
+				</div>
+				
+				<div class="aboutColumn" id="aboutus">
+					<p>
+						At RapidPrint, we provide high-quality and reliable printing services tailored to meet the needs of students, staff, and the wider UMPSA community. 
+						From standard to premium printing packages, we offer affordable and fast solutions to bring your projects to life. Whether it's academic assignments, 
+						bulk printing, or custom printing requests, we ensure every print job is handled with precision and care. Explore our services today and experience 
+						seamless printing at your fingertips!
+					</p>
+					
+					<a href="../Login/Login.php">					
+						<button class="learnMoreBtn">Learn More</button>
+					</a>				
+				</div>					
+			</div>
+		</div>
+		
+		<footer>
+		</footer>
+		
+		</div>
+	</body>
+</html>
