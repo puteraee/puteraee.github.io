@@ -1,0 +1,705 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;    
+    margin: 0;
+	background: linear-gradient(to bottom, #d9e9f0, #d9e9f0, white);
+}
+
+footer {
+    margin-top: auto; /* Pushes the footer to the bottom */
+    background-color: #5c8a9c;
+    padding: 1rem;  /* Use relative units */
+    text-align: center;
+    color: white;
+	height: 50px;
+    width: 100%; /* Ensures the footer takes up the full width */
+}
+
+.navBar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #5c8a9c;
+	padding: 20px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.logo-container{
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.logo{
+	width: 60px;
+	height: auto;
+	margin-right:10px;
+}
+
+.brand-name{
+	color: black;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.navbar{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	flex-grow: 1;
+	flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.navbar a{
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.navbar a.active{
+	background-color: #84bfb7;
+	color: black;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.dropdown{
+	float: left;
+	overflow: hidden;
+}
+
+.dropdown .dropbtn{
+	cursor: pointer;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus{
+	background-color: #84bfb7;
+	color: black;
+}
+
+.dropdown-content{
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a{
+	float: none;
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover{
+	background-color: #ddd;
+}
+
+.show{
+	display: block;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.search-container{
+	float: left;
+	display: flex;
+	align-items: center;
+	margin-left: 5px;
+}
+
+.search-container input[type=text]{
+	padding: 6px;
+	font-size: 16px;
+	border: none;
+	height: 32px;
+	width: 400px;
+}
+
+.search-container button{
+	float: right;
+	padding: 6px 10px;
+	background: #ddd;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	height: 32px;
+}
+
+.search-container button i{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.search-container button:hover{
+	background: #ccc;
+}
+
+@media screen and (max-width:600px){
+	.search-container{
+		float: none;
+	}
+	
+	.search-container a, search-container input[type=text], search-container button{
+		float: none;
+		display: block;
+		text-align: left;
+		width: 100%;
+		margin: 0;
+		padding: 14px;
+	}
+	
+	.search-container input[type=text]{
+		border: 1px solid #ccc;
+	}
+}
+
+.cart-container{
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+}
+
+.cart-link {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 16px;
+}
+
+.cart-link i {
+    margin-right: 8px;
+	align-items: center;
+	justify-content: center;
+}
+
+.login-container{
+	display: flex;
+	align-items: center;
+}
+
+.login-link {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	display: flex;
+	align-items: center;
+}
+
+.login-link i {
+    margin-right: 8px;
+}
+
+table{
+	width: 100%;
+}
+
+td{
+	vertical-align: middle;
+	padding: 30px;
+}
+
+.left-column{
+	width: 50%;
+	border: none;
+	padding: 50px;
+}
+
+.left-column h1{
+	margin-bottom: 20px;
+}
+
+.right-column{
+	width: 50%;
+	padding-top: 70px;
+	padding-left: 20px;
+	border: none;
+}
+
+.generalInfo{
+	align-items: center;
+	margin: 0;
+	border: none;
+}
+
+.printImg{
+	width: 100%; /* Ensures the image is responsive */
+	height: auto; /* Maintains the aspect ratio of the image */
+	max-width: 100%; /* Prevents the image from becoming too large */
+	object-fit: contain; /* Ensures the image fits within the column */
+}
+
+.infoContainer{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+	padding: 24px;
+	gap: 20px;
+	height: 440px;
+	border: none;
+}
+
+.infoColumn1{
+	flex: 1;
+    width: 33%;
+    padding: 24px;
+    height: auto;
+    border: none;
+	border-radius: 10px; /* Make the button rounded */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start; /* Align content to the left */
+	background: linear-gradient(to right, #c5d5ce, #7f78f8);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+.infoColumn1 h3 {
+    margin: 0; /* Reduce the top and bottom margin */
+}
+
+.infoColumn1 p {
+    margin: 0; /* Reduce the top and bottom margin */
+}
+
+.discountImage {
+    width: 45%; /* Adjust the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent distortion */
+}
+
+.findOutMoreBtn {
+    margin-top: 25px; /* Add space between the paragraph and the button */
+    padding: 10px 20px; /* Adjust padding for better button size */
+    background-color: #02c9b3; /* Button background color */
+    color: black; /* Button text color */
+    border: none; /* Remove default button border */
+    border-radius: 20px; /* Make the button rounded */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    align-self: flex-end; /* Align the button to the right */
+    font-size: 14px; /* Adjust font size */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.findOutMoreBtn:hover {
+    background-color: #00a794; /* Darker shade on hover */
+}
+
+.findOutMoreBtn i {
+    margin-left: 10px; /* Add space between the text and the icon */
+}
+
+.infoColumn2{
+	flex: 1;
+    width: 33%;
+    padding: 30px;
+    height: auto;
+    border: none;
+	border-radius: 10px; /* Make the button rounded */
+	background-image: url('column2bg.png'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: right center; /* Moves the background image to the right */
+	background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Vertically centers the content */
+    align-items: flex-start; /* Align content to the left */
+	position: relative; /* Allow absolute positioning inside */
+    gap: 5px; /* Reduce spacing between elements */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+.infoColumn2 h1,.infoColumn2 h2 {
+    margin: 5px; /* Remove default margins to reduce extra spacing */
+}
+
+.infoColumn2 h1 {
+    font-size: 2.2em; /* Adjust font size for better visual hierarchy */
+}
+
+.infoColumn2 h2 {
+    font-weight: normal; /* Remove bold style */
+    font-size: 1.5em; /* Maintain the size */
+}
+
+.customBtn {
+	position: absolute; /* Position it absolutely within the container */
+    margin-top: 20px; /* Add space between the paragraph and the button */
+    padding: 10px 20px; /* Adjust padding for better button size */
+    bottom: 20px; /* 20px from the bottom of the container */
+    right: 20px; /* 20px from the right of the container */
+	background-color: #8174f9; /* Button background color */
+    color: black; /* Button text color */
+    border: none; /* Remove default button border */
+    border-radius: 20px; /* Make the button rounded */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    align-self: flex-end; /* Align the button to the right */
+    font-size: 14px; /* Adjust font size */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.customBtn:hover {
+    background-color: #6a5fc6; /* Darker shade on hover */
+}
+
+.customBtn i {
+    margin-left: 10px; /* Add space between the text and the icon */
+}
+
+.infoColumn3{
+	flex: 1;
+    width: 33%;
+    padding: 20px;
+    height: auto;
+    border: none;
+    border-radius: 10px; /* Make the button rounded */
+    background-image: url('column3bg.png'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    position: relative; /* Enables absolute positioning for child elements */
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-end; /* Align content towards the bottom */
+    align-items: flex-end; /* Align content to the right */
+    text-align: right; /* Align text inside the container to the right */
+    gap: 10px; /* Add spacing between text and button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+.infoColumn3 h1 {
+	margin: 0; /* Remove default margin */
+    font-size: 2.0em; /* Adjust font size if necessary */
+    line-height: 1.2; /* Adjust line spacing for multi-line text */
+    margin-bottom: 30px; /* Space between text and the button */
+}
+
+.signBtn {
+    position: absolute; /* Keeps the button at the bottom-right */
+    bottom: 20px; /* Space from the bottom */
+    right: 20px; /* Space from the right */
+    padding: 10px 20px; /* Adjust padding for better button size */
+    background-color: #fff7d3; /* Button background color */
+    color: black; /* Button text color */
+    border: none; /* Remove default button border */
+    border-radius: 20px; /* Make the button rounded */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 14px; /* Adjust font size */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.signBtn:hover {
+    background-color: #d6cfaf; /* Darker shade on hover */
+}
+
+.signBtn i {
+    margin-left: 10px; /* Add space between the text and the icon */
+}
+
+.slideContainer{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+	border: none;
+	padding: 24px;
+	gap: 20px;
+	height: 340px;
+	width: 100%;
+}
+
+.slideColumn-left {
+    flex: 4; /* 40% of the total space */
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+	padding: 40px;
+	
+    background-image: url('memberImg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+h2 {
+    font-weight: bold; /* Make the heading bold */
+	font-size: 1.8em; /* Maintain the size */
+    margin-bottom: 10px; /* Reduce the gap between the heading and paragraph */
+}
+
+p {
+    margin-top: 0; /* Remove any default top margin on paragraph */
+    margin-bottom: 10px; /* Add a small bottom margin to create space between paragraph and button */
+}
+
+.signUpBtn {
+    margin-top: 10px; /* Add space between the paragraph and the button */
+    padding: 10px 20px;
+    background-color: #4f8fff;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.signUpBtn:hover {
+    background-color: #ff634f; /* Darker shade on hover */
+}
+
+.signBtn i {
+    margin-left: 10px; /* Add space between the text and the icon */
+}
+
+.slideColumn-right{
+	flex: 6; /* 60% of the total space */
+    height: 300px;
+    border: none;
+	border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents overflow of large images */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+/* Slideshow Container */
+.slideshow-container {
+    width: 100%; /* Adjust to fit the parent container */
+    height: 100%; /* Take full height of parent */
+    position: relative;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+/* Individual Slides */
+.mySlides {
+    display: none; /* Hide slides by default */
+    width: 100%; /* Set width to fill the container */
+    height: 100%;
+}
+
+/* Slideshow Images */
+.mySlides img {
+    width: 100%; /* Images take full width of container */
+    height: 300px; /* Maintain height of container */
+    object-fit: cover; /* Ensures the image fits and maintains aspect ratio */
+}
+
+.slideImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the space */
+    border-radius: 10px; /* Rounded corners for consistency */
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+    border-radius: 3px;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fade Animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+.customContainer{
+	display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+    border: none;
+	border-radius: 10px;
+    padding: 24px;
+    gap: 20px;
+    height: 140px;
+	width:90%;
+	
+	background-image: url('wsImg.png'); /* Path to your image */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: right center; /* Moves the background image to the right */
+	background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.memberColumn{
+	flex: 3; /* Takes 75% width */
+    display: flex;
+    align-items: center; /* Vertically center text */
+    padding: 20px;
+    border: none;
+}
+
+.memberColumn h1 {
+    font-size: 2.0em; /* Adjust text size */
+    margin: 0; /* Remove default margin */
+}
+
+.customColumn{
+	flex: 1; /* Takes 25% width */
+    display: flex;
+    align-items: center; /* Vertically center button */
+    justify-content: center; /* Center button horizontally */
+    padding: 10px;
+    border: none;
+}
+
+/* WhatsApp Button Styling */
+.whatsappButton {
+    display: flex;
+    align-items: center;
+    background-color: #80958c; /* WhatsApp green */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    gap: 10px; /* Space between icon and text */
+}
+
+.whatsappButton i {
+    font-size: 1.2em; /* Adjust icon size */
+}
+
+.whatsappButton:hover {
+    background-color: #1eb24b; /* Darker green on hover */
+}
+
+.aboutContainer{
+	display: flex;
+    margin-top: 70px;
+    border: none;
+    padding: 24px;
+    height: 330px;
+	background-color: white;
+}
+
+.aboutColumn{
+	flex: 1;
+    width: 50%;
+    padding: 10px;
+    height: 200px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    text-align: justify;
+    line-height: 1.5; /* Improve paragraph spacing */
+    flex-direction: column; /* Stack items vertically */
+}
+
+.aboutTable{
+	width: 100%;
+}
+
+.aboutRow{
+    display: flex; /* Enables horizontal alignment */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    padding: 10px;
+    text-align: center;
+}
+
+.aboutRow h2 {
+    font-size: 2em; /* Adjust the size of "ABOUT US" */
+    margin: 0; /* Remove default margin */
+    font-weight: bold; /* Make it bold */
+}
+
+.learnMoreBtn {
+    margin-top: 20px; /* Space between paragraph and button */
+    padding: 10px 20px; /* Button padding */
+    font-size: 1em; /* Font size */
+    background-color: white; /* Button color */
+    color: #5c8a9c; /* Button text color */
+    border: 2px solid #5c8a9c; /* Remove border */
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.learnMoreBtn:hover {
+    background-color: #5c8a9c; /* Darker blue on hover */
+	color: white;
+}
